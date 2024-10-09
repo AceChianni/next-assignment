@@ -1,0 +1,32 @@
+/* src/components/Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffebcd; /* Blanched Almond */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #ff6f61; /* Coral */
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    color: #5f9ea0; /* Cadet Blue */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks li a:hover {
+    color: #ff6f61; /* Coral */
+  }
+  
