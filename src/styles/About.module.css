@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+    padding: 50px;
+    background-color: #F5F5DC; /* Background color */
+    color: #004D40; /* Main text color */
+  }
+  
+  .title {
+    color: #FF7043; /* Secondary color for headings */
+  }
+  
+  .description {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .subheading {
+    margin-top: 30px;
+    color: #81D4FA; /* Accent color for subheadings */
+  }
+  
+  .achievements {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
