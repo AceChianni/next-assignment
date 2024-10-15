@@ -1,31 +1,18 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
   justify-items: center;
-  min-height: 100svh;
+  min-height: 100vh; /* Changed to 100vh for full height */
   padding: 80px;
   gap: 64px;
-  font-family: var(--font-geist-sans);
+  font-family: 'Geist Sans', sans-serif; 
   background-color: #F5F5DC; /* Background color */
   color: #004D40; /* Default text color */
 }
 
 @media (prefers-color-scheme: dark) {
   .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
     color: #F5F5DC; /* Light text for dark mode */
     background-color: #004D40; /* Dark background for dark mode */
   }
@@ -39,7 +26,7 @@
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
+  font-family: 'Geist Mono', monospace; 
   padding-left: 0;
   margin: 0;
   font-size: 14px;
@@ -54,7 +41,7 @@
 
 .main code {
   font-family: inherit;
-  background: var(--gray-alpha-100);
+  background: rgba(0, 0, 0, 0.05); /* Semi-transparent background for code */
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
@@ -83,13 +70,13 @@
 }
 
 a.primary {
-  background: var(--foreground);
-  color: var(--background);
+  background: #004D40; 
+  color: #F5F5DC; /* Button text color */
   gap: 8px;
 }
 
 a.secondary {
-  border-color: var(--gray-alpha-200);
+  border-color: rgba(0, 0, 0, 0.08);
   min-width: 180px;
 }
 
@@ -112,12 +99,12 @@ a.secondary {
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
-    background: var(--button-primary-hover);
+    background: #383838;
     border-color: transparent;
   }
 
   a.secondary:hover {
-    background: var(--button-secondary-hover);
+    background: #f2f2f2;
     border-color: transparent;
   }
 
@@ -162,32 +149,48 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.logo {
+  filter: invert(); /* Inverts logo colors for dark mode */
 }
 
 .splashContainer {
   position: relative; /* Position relative for absolute children */
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   overflow: hidden; /* Ensure no overflow */
 }
 
 .splashImage {
-  position: absolute; /* Position the image absolutely */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  object-fit: cover; /* Cover to maintain aspect ratio */
-  z-index: -1; /* Send it to the back */
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  z-index: -1; 
 }
 
 .title, .description, .quote {
-  position: relative; /* Ensure text is above the image */
+  position: relative; 
   color: #004D40; /* Main text color */
-  z-index: 1; /* Bring text above background */
-  text-align: center; /* Center text */
+  z-index: 1; 
+  text-align: center; 
+}
+
+/* Specific styles for Adventurer Count */
+.adventurer-count {
+  color: #50C878; /* Emerald green color */
+}
+
+/* Transparent background bars */
+.background-bar {
+  background-color: transparent !important; 
+  height: 100px; 
+}
+
+.overlayContent {
+  position: relative; 
+  z-index: 1; 
+  text-align: center; /* Center the text */
+  color: #004D40; 
 }
