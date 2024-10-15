@@ -163,3 +163,28 @@ a.secondary {
     filter: invert();
   }
 }
+
+.splashContainer {
+  position: relative; /* Position relative for absolute children */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.splashImage {
+  position: absolute; /* Position the image absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+  z-index: -1; /* Send it to the back */
+}
+
+.title, .description, .quote {
+  position: relative; /* Ensure text is above the image */
+  color: white; /* Ensure text is readable */
+  z-index: 1; /* Bring text above background */
+  text-align: center; /* Center text */
+}
+
