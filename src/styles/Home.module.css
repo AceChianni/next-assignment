@@ -14,6 +14,8 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: #F5F5DC; /* Background color */
+  color: #004D40; /* Default text color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,8 @@
 
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
+    color: #F5F5DC; /* Light text for dark mode */
+    background-color: #004D40; /* Dark background for dark mode */
   }
 }
 
@@ -183,8 +187,7 @@ a.secondary {
 
 .title, .description, .quote {
   position: relative; /* Ensure text is above the image */
-  color: white; /* Ensure text is readable */
+  color: #004D40; /* Main text color */
   z-index: 1; /* Bring text above background */
   text-align: center; /* Center text */
 }
-
